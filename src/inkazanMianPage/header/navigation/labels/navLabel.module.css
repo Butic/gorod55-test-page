@@ -1,0 +1,55 @@
+.nav__label{
+position: static;
+height: 20px;
+left: 22px;
+top: 0px;
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+display: flex;
+align-items: flex-end;
+text-transform: uppercase;
+
+/* Text / On Surface */
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 6px;
+}
+
+.nav__label_blur{
+    position: static;
+    height: 20px;
+    left: 22px;
+    top: 0px;
+    
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    display: flex;
+    align-items: flex-end;
+    text-transform: uppercase;
+    
+    /* Text / On Surface */
+    color: #FFFFFF;
+    
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 6px;
+
+    opacity: 0.6;
+    }
