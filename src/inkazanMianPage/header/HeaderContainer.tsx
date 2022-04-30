@@ -1,7 +1,8 @@
 import React from "react";
 import NavigationContainer from "./navigation/NavigationContainer";
 import classes from "./header.module.css";
-import MainNewsContainer from "./mainTextContainer/MainNewsContainer";
+import MainNewsContainer from "./mainNewsContainer/MainNewsContainer";
+import SecondaryNewsContainer from "./secondaryNewsContainer/SecondaryNewsContainer";
 
 
 const HeaderContainer = () => {
@@ -9,6 +10,7 @@ const HeaderContainer = () => {
         <div className={classes.header__container}>
             <NavigationContainer/>
             <MainNewsContainer/>
+            <SecondaryNewsContainer/>
         </div>
     );
 };

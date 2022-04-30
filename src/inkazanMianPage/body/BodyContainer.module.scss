@@ -1,0 +1,104 @@
+.body{
+    &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        position: absolute;
+        width: 1383px;
+        height: 491px;
+        left: 28px;
+        top: 1012px;
+        border-top: 1px solid rgba(255, 255, 255, .12);
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        color: #FFFFFF;
+        padding-top: 47px;
+    }
+    &__topNews{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+
+        position: static;
+        width: 782px;
+        height: 176px;
+        left: 0px;
+        top: 34px;
+        &__header{
+            font-size: 17px;
+            line-height: 26px;
+        }
+        &__mainNews{
+            padding-top: 8px;
+            font-size: 48px;
+            line-height: 60px;
+            /* or 125% */
+            text-align: center;
+            width: 140%;
+            margin: 0;
+
+/* Text / On Surface */
+
+        }
+        &__additionalMaterials{
+            font-size: 15px;
+            line-height: 20px;
+            display: flex;
+            align-items: flex-end;
+            background: none;
+            outline: none;
+            padding: 6px 8px 8px;
+            margin-top: 22px;
+            position: static;
+            width: 126px;
+            height: 34px;
+            left: 328px;
+            top: 142px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-sizing: border-box;
+            border-radius: 8px;
+            color: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+        }
+    }
+    &__bottomNews{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        margin-top: 66px;
+        position: static;
+        width: 820px;
+        height: 168px;
+        left: 0px;
+        top: 276px;
+        &__container{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            width: 254px;
+            height: 118px;
+            left: 1px;
+            top: 0px;
+        }
+        &__container:not(:first-child){
+            padding-left: 30px;
+        }
+        &__title{
+            font-size: 17px;
+            line-height: 26px;
+        }
+        &__date{
+            font-size: 15px;
+            line-height: 20px;
+            display: flex;
+            align-items: flex-end;
+            padding-top: 20px;
+            opacity: 0.3;
+        }
+    }
+}
