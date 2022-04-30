@@ -1,16 +1,9 @@
-# Getting Started with Create React App
+# To start this app you shoul make 3 simple stepts:
 
-Hello this is test page for gorod55
+1) open terminal in node.js
+2) write in terminal:
+### `git clone https://github.com/Butic/gorod55-test-page.git`
+3) then write command:
+### `npm start`
 
-## Available Scripts
-
-To start this app you shoul make 3 simple stepts:
-
-### `open terminal in node.js`
-
-### `write in terminal: 'git clone https://github.com/Butic/gorod55-test-page.git'`
-
-### `then write command: 'npm start'`
-
-
-### `enjoy`
+enjoy)
