@@ -73,25 +73,47 @@
         height: 455px;
         left: 28px;
         top: 98px;
-        &__blur1{
+        &__blur_left1{
             position: absolute;
             width: 1036px;
             height: 455px;
-            left: 0px;
+            left: 0;
             top: -14px;
-            background: linear-gradient(90deg, rgba(18, 18, 18, 0.22) 22.26%, rgba(18, 18, 18, 0.1) 104.25%);
+            background: linear-gradient(90deg, rgba(18, 18, 18, 0.32) 22.26%, rgba(18, 18, 18, 0.1) 104.25%);
             filter: blur(10px);
             border-radius: 0px 500px 500px 0px;
             z-index: -1;
         }
-        &__blur2{
+        &__blur_right1{
             position: absolute;
             width: 1036px;
             height: 455px;
             left: 0px;
             top: -14px;
             background: linear-gradient(270deg, rgba(18, 18, 18, 0.22) 22.26%, rgba(18, 18, 18, 0.1) 104.25%);
-            filter: blur(10px);
+            filter: blur(35px);
+            border-radius: 0px 500px 500px 0px;
+            z-index: -1;
+        }
+        &__blur_left2{
+            position: absolute;
+            width: 1036px;
+            height: 455px;
+            left: 0px;
+            top: -14px;
+            background: linear-gradient(340deg, rgba(18, 18, 18, 0.92) 22.26%, rgba(18, 18, 18, 0.1) 104.25%);
+            filter: blur(100px);
+            border-radius: 0px 500px 500px 0px;
+            z-index: -1;
+        }
+        &__blur_right2{
+            position: absolute;
+            width: 1036px;
+            height: 455px;
+            left: 0px;
+            top: -14px;
+            background: linear-gradient(40deg, rgba(18, 18, 18, 0.92) 22.26%, rgba(18, 18, 18, 0.1) 104.25%);
+            filter: blur(100px);
             border-radius: 0px 500px 500px 0px;
             z-index: -1;
         }
