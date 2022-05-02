@@ -4,8 +4,10 @@ import { checkImage, getNecessaryStyle } from '../../../api/checkCropImage';
 import { BLURE_SIDE } from '../../../enums/blureSide.enum';
 
 const MainNewsContainer = ({ image }) => {
+    
   const [blur, setBlur] = useState({ blur_left: 0, blur_right: 0 });
   const [blurName, setBlurName] = useState('');
+
   useEffect(() => {
     const callCheckImage = async () => {
       const result = await checkImage(image);
@@ -14,7 +16,9 @@ const MainNewsContainer = ({ image }) => {
     };
     image && callCheckImage();
   }, [image]);
+
   let containerName = classes.mainTextContainer;
+
   switch (blurName) {
     case BLURE_SIDE.LEFT:
       blur.blur_left === 2

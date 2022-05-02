@@ -2,8 +2,8 @@ import getCroppedImg from './cropImage';
 import analyze from 'rgbaster';
 import { BLURE_SIDE } from '../enums/blureSide.enum';
 
-export const getNecessaryStyle = ({blur_left=0, blur_right=0}) => {
-  if(blur_left===blur_right&&blur_left===0) return BLURE_SIDE.NOTHING
+export const getNecessaryStyle = ({ blur_left = 0, blur_right = 0 }) => {
+  if (blur_left === blur_right && blur_left === 0) return BLURE_SIDE.NOTHING;
   if (blur_right > blur_left) return BLURE_SIDE.RIGHT;
   else return BLURE_SIDE.LEFT;
 };
@@ -18,7 +18,11 @@ const checkBlurValue = (
       150 && [...imageData].filter((el) => el.count >= 250).length > 25
       ? 2
       : 1;
-  }
+  } else if (
+    Number(imageData[0].color.slice(4).slice(0, -1).split(',')[2]) > 150 
+    // && imageData.length > 4000
+  )
+    return 1;
   return 0;
 };
 // 0 - nthing to change
@@ -42,10 +46,12 @@ export const checkImage = async (image: string) => {
   const imageData1: [{ color: string; count: number }] = await analyze(
     croppedImgUrl1
   );
+
   const imageData2: [{ color: string; count: number }] = await analyze(
     croppedImgUrl2
   );
-
+  console.log(imageData1);
+  console.log(imageData2);
   return {
     blur_left: checkBlurValue(imageData1),
     blur_right: checkBlurValue(imageData2),
