@@ -8,7 +8,7 @@ import image from "../../img/image.png";
 
 const HeaderContainer = () => {
     return(
-        <div className={classes.header__container} style={{background: `url(${image})`}}>
+        <div className={classes.header__container} style={{background: `center / cover no-repeat url(${image})`}}>
             <NavigationContainer/>
             <MainNewsContainer image={image}/>
             <SecondaryNewsContainer/>
