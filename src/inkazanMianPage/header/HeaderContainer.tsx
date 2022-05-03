@@ -3,7 +3,7 @@ import NavigationContainer from "./navigation/NavigationContainer";
 import classes from "./header.module.css";
 import MainNewsContainer from "./mainNewsContainer/MainNewsContainer";
 import SecondaryNewsContainer from "./secondaryNewsContainer/SecondaryNewsContainer";
-import image from "../../img/image2.png";
+import image from "../../img/image1.jpeg";
 
 
 const HeaderContainer = () => {

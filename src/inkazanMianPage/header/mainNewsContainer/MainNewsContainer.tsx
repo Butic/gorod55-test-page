@@ -16,9 +16,9 @@ const MainNewsContainer = ({ image }) => {
     };
     image && callCheckImage();
   }, [image]);
-
+  
   let containerName = classes.mainTextContainer;
-
+  
   switch (blurName) {
     case BLURE_SIDE.LEFT:
       blur.blur_left === 2
