@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import classes from '../header.module.css';
 import { checkImage, getNecessaryStyle } from '../../../api/checkCropImage';
 import { BLURE_SIDE } from '../../../enums/blureSide.enum';
@@ -8,16 +8,17 @@ const MainNewsContainer = ({ image }) => {
   const [blur, setBlur] = useState({ blur_left: 0, blur_right: 0 });
   const [blurName, setBlurName] = useState('');
 
-  useEffect(() => {
-    const callCheckImage = async () => {
-      const result = await checkImage(image);
-      setBlur(result);
-      setBlurName(getNecessaryStyle(result));
-    };
-    image && callCheckImage();
-  }, [image]);
+  const callCheckImage = async () => {
+    const result = await checkImage(image);
+    setBlur(result);
+    setBlurName(getNecessaryStyle(result));
+  };
+
+  useMemo(callCheckImage, [image]);
   
   let containerName = classes.mainTextContainer;
+  
+  console.log(blur);
   
   switch (blurName) {
     case BLURE_SIDE.LEFT:
