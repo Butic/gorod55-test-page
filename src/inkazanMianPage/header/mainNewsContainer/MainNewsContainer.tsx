@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import classes from '../header.module.css';
 import { checkImage, getNecessaryStyle } from '../../../api/checkCropImage';
 import { BLURE_SIDE } from '../../../enums/blureSide.enum';
