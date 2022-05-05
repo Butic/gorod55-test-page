@@ -8,7 +8,19 @@ const BlurContainer = ({image}) =>{
     const [blurName, setBlurName] = useState('');
   
     const callCheckImage = async () => {
-      const result = await checkImage(image);
+      const pixelCrop1 = {
+        x: 20,
+        y: 100,
+        width: 350,
+        height: 350,
+      };
+      const pixelCrop2 = {
+        x: 370,
+        y: 100,
+        width: 350,
+        height: 350,
+      };
+      const result = await checkImage(image, pixelCrop1, pixelCrop2);
       setBlur(result);
       setBlurName(getNecessaryStyle(result));
     };
@@ -29,6 +41,9 @@ const BlurContainer = ({image}) =>{
           : (containerName = classes.mainTextContainer__blur_right1);
         break;
     }
+
+    console.log(blur);
+
     return <div className={containerName} />
 };
 

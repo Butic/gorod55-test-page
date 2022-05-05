@@ -1,7 +1,5 @@
-import React, { useMemo, useState } from 'react';
+import React from 'react';
 import classes from '../header.module.css';
-import { checkImage, getNecessaryStyle } from '../../../api/checkCropImage';
-import { BLURE_SIDE } from '../../../enums/blureSide.enum';
 import BlurContainer from './BlurContainer';
 
 const MainNewsContainer = ({ image }) => {

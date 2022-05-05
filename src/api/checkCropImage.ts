@@ -1,6 +1,7 @@
 import getCroppedImg from './cropImage';
 import analyze from 'rgbaster';
 import { BLURE_SIDE } from '../enums/blureSide.enum';
+import { pixelCrop } from '../interfaces/cropAPI';
 
 export const getNecessaryStyle = ({ blur_left = 0, blur_right = 0 }) => {
   if (blur_left === blur_right && blur_left === 0) return BLURE_SIDE.NOTHING;
@@ -29,20 +30,10 @@ const checkBlurValue = (
 // 0 - nothing to change
 // 1 - need minor changed
 // 2 - need major changes
-export const checkImage = async (image: string) => {
-  const croppedImgUrl1: unknown = await getCroppedImg(image, {
-    x: 20,
-    y: 100,
-    width: 350,
-    height: 350,
-  });
+export const checkImage = async (image: string, pixelCrop1 :pixelCrop, pixelCrop2: pixelCrop) => {
+  const croppedImgUrl1: unknown = await getCroppedImg(image, pixelCrop1);
   
-  const croppedImgUrl2: unknown = await getCroppedImg(image, {
-    x: 370,
-    y: 100,
-    width: 350,
-    height: 350,
-  });
+  const croppedImgUrl2: unknown = await getCroppedImg(image, pixelCrop2);
 
   const imageData1: [{ color: string; count: number }] = await analyze(
     croppedImgUrl1

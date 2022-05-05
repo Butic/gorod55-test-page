@@ -1,0 +1,1 @@
+export interface pixelCrop { x: number; y: number; width: number; height: number };
