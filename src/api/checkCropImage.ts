@@ -14,7 +14,7 @@ const checkBlurValue = (
     { color: 'rgb(0,0,0)', count: 1 },
   ]
 ) => {
-  if(imageData[0].color.slice(4).slice(0, -1).split(',').filter(el=>Number(el)>=150).length === 0) return 0
+  if(imageData[0].color.slice(4).slice(0, -1).split(',').filter(el=>Number(el)>=150).length === 0) return 0;
   if (imageData.length > 20000) {
     return Number(imageData[0].color.slice(4).slice(0, -1).split(',').filter(el=>Number(el)>=150).length) >=
       2 && [...imageData].filter((el) => el.count >= 250).length > 25
@@ -31,6 +31,7 @@ const checkBlurValue = (
 // 1 - need minor changed
 // 2 - need major changes
 export const checkImage = async (image: string, pixelCrop1 :pixelCrop, pixelCrop2: pixelCrop) => {
+  
   const croppedImgUrl1: unknown = await getCroppedImg(image, pixelCrop1);
   
   const croppedImgUrl2: unknown = await getCroppedImg(image, pixelCrop2);

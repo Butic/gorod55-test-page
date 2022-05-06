@@ -26,23 +26,21 @@ const BlurContainer = ({image}) =>{
     };
   
     useMemo(callCheckImage, [image]);
-    
-    let containerName = classes.mainTextContainer;
+
+    let containerName = classes.mainTextContainer__blur + ' ';
     
     switch (blurName) {
       case BLURE_SIDE.LEFT:
         blur.blur_left === 2
-          ? (containerName = classes.mainTextContainer__blur_left2)
-          : (containerName = classes.mainTextContainer__blur_left1);
+          ? (containerName += classes.mainTextContainer__blur_left2)
+          : (containerName += classes.mainTextContainer__blur_left1);
         break;
       case BLURE_SIDE.RIGHT:
         blur.blur_right === 2
-          ? (containerName = classes.mainTextContainer__blur_right2)
-          : (containerName = classes.mainTextContainer__blur_right1);
+          ? (containerName += classes.mainTextContainer__blur_right2)
+          : (containerName += classes.mainTextContainer__blur_right1);
         break;
     }
-
-    console.log(blur);
 
     return <div className={containerName} />
 };
